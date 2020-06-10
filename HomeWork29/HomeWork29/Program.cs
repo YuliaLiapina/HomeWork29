@@ -8,20 +8,25 @@ namespace HomeWork29
     {
         public static void Main(string[] args)
         {
-            var newClient = new ClientBL() { FirstName = "Alen", LastName = "Delon", Telephone = "05736475882" };
-            BusinessLogic.AddClient(newClient);
+            var vetclinicManager = new BusinessLogic();
 
-            var newPet = new PetBL() { PetName = "Bobik", Type = "Dog" };
-            BusinessLogic.AddPet(newPet,2);
+            var newClient = new ClientBL() { FirstName = "Tom", LastName = "Krus", Telephone = "0984756874" };
 
-            var newWaybill = new IndividualWaybillBL() { TotalAmount = 200.87M, ClientId = 1 };
-            BusinessLogic.AddWaybill(newWaybill,3);
+            vetclinicManager.AddClient(newClient);
 
-            BusinessLogic.RemovingClientById(5);
-            BusinessLogic.RemovingPetById(6);
-            BusinessLogic.RemovingWaybillById(2);
+            var newPet = new PetBL() { PetName = "Murzik", Type = "Cat", ClientId = 13 };
 
-            BusinessLogic.GetClients();
+            vetclinicManager.AddPet(newPet);
+
+            var newWaybill = new IndividualWaybillBL() { TotalAmount = 100.87M, ClientId = 13 };
+
+            vetclinicManager.AddWaybill(newWaybill);
+
+            vetclinicManager.RemovingClientById(1);
+            vetclinicManager.RemovingPetById(4);
+            vetclinicManager.RemovingWaybillById(2);
+
+            vetclinicManager.GetClients();
 
             Console.ReadKey();
         }
