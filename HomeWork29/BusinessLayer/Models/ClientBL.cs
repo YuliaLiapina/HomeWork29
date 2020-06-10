@@ -4,7 +4,7 @@ namespace BusinessLayer.Models
 {
     public class ClientBL
     {
-        public ClientBL(/*string clientFirstName, string clientLastName, string telephone*/)
+        public ClientBL()
         {
             Pets = new List<PetBL>();
             IndividualWaybills = new List<IndividualWaybillBL>();
