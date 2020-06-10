@@ -49,7 +49,7 @@ namespace BusinessLayer
 
             if (idClient > 0 && idClient < clients.Count)
             {
-                clients[0].IndividualWaybills.Add(newWaybill);
+                clients[idClient - 1].IndividualWaybills.Add(newWaybill);
             }
             else
             {
